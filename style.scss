@@ -4,15 +4,17 @@
     box-sizing: border-box;
 }
 
+//--------Cabeçalho
+
 header {
     background-color: #1F2937;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    height: 100px;
+    height: 110px;
 
-    .imgHeader {
+    .logoHeader {
         height: 90%;
         width: auto;
     }
@@ -20,44 +22,253 @@ header {
     .buttonHeader {
         background-color: #F97415;
         color: #ffffff;
-        height: 35px;
-        width: 80px;
+        height: 40px;
+        width: 90px;
         border-radius: 0.6rem;
-        border-color: none;
+        border-color: #F97415;
         font-weight: bold;
+        font-size: 1.2rem;
         cursor: pointer;
     }
 }
 
-.article1Main {
+//--------Corpo Primeira e Segunda Parte
+
+.mostruario {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 450px;
+    height: 102vh;
+}
 
-    .divArticle1Main {
-        width: 35%;
+.dadosDoMostruario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+
+    .divMostruario {
+        width: 42%;
         height: 50%;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+        margin-left: 18vh;
     }
 
     #nomeDoPet {
         color: #F97415;
         font-family: "Inter", sans-serif;
-        font-size: 3rem;
+        font-size: 3.6rem;
     }
 
     #descricaoDoPet {
         color: #000000;
         font-family: "Inter", sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     #fotoDoPet {
         border-radius: 1rem;
-        width: 45%;
+        width: 51%;
         height: auto;
     }
 }
+
+.listagem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 65%;
+
+    .fichaDoPet {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: top 0.3s ease, left 0.3s ease;
+        cursor: pointer;
+        
+        .foto {
+            width: 135px;
+            height: 135px;
+            border-radius: 100%;
+            object-fit: cover;            
+        }
+
+        .foto:hover {
+            transform: translateY(-10px);
+        }
+
+        .nome {
+            display: none;
+        }
+
+        .descricao {
+            display: none;
+        }
+    }
+}
+
+//--------Corpo Quadro de Inscricao
+
+.quadroDeInscricao {
+    background-color: #F59F0A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    height: 150vh;
+}
+
+.tituloQuadroDeInscricao {
+    font-size: 2.8rem;
+    width: 70%;
+    text-align: center;
+}
+
+.textoQuadroDeInscricao {
+    font-size: 2rem;
+    width: 75%;
+    text-align: center;
+}
+
+form {
+    height: 65%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .secaoDoFormulario {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        width: 100%;
+        
+        label {
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+
+        input {
+            border: #ffffff;
+            border-radius: 0.4rem;
+            height: 5vh;
+            padding: 0px 10px;
+        }
+
+        ::placeholder {
+            font-size: 0.9rem;
+            color: #797979;
+        }
+
+        .checkbox {
+            cursor: pointer;
+            appearance: none;
+            height: 22px;
+            width: 22px;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .checkbox::before {
+            content: '';
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-image: url(./assets/Check.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            rotate: -360deg;
+            scale: 0;
+            opacity: 0;
+            transition: 200ms ease;
+        }
+
+        .checkbox:checked::before {
+            rotate: 0deg;
+            scale: 1;
+            opacity: 1;
+
+        }
+
+        .divCheckbox {
+            display: flex;
+            width: 75%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        p {
+            font-size: 1.7rem;
+        }       
+    }
+
+    .buttonDoFormulario {
+        color: #ffffff;
+        background-color: #F97415;
+        width: 100%;
+        height: 18vh;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+    }
+}
+
+//--------Rodape
+
+footer {
+    background-color: #1F2937;
+    height: 25vh;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.primeiraParteDoRodape {
+    height: 65%;
+    border-bottom: solid #4B5563;
+    border-width: 0.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logoFooter {
+        width: 90px;
+    }
+
+    .textoFooter {
+        width: 40%;
+        color: #9CA3AF;
+        font-size: 1rem;
+    }
+
+    .articleLinksFooter {
+        width: 6%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .linkFooter{
+        width: 30px;
+    }
+}
+
+.segundaParteDoRodape {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    text-align: center;
+    margin: 18px;
+}
+
+//----------------Smartphone

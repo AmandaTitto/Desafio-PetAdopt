@@ -10,29 +10,118 @@
 <body>
 
     <header>
-        <img class="imgHeader" src="./assets/Logo PetAdopt.png" alt="Logo PetAdopt">
+        <img class="logoHeader" src="./assets/Logo PetAdopt.png" alt="Logo PetAdopt">
         <button class="buttonHeader">Adote</button>
     </header>
 
     <main>
-        <section class="banner">
-            <article class="article1Main">
-                <div class="divArticle1Main">
-                    <h2 id="nomeDoPet">Scooby</h2>
+
+        <section class="mostruario">
+
+            <article class="dadosDoMostruario">
+
+                <div class="divMostruario">
+                    <h1 id="nomeDoPet">Scooby</h1>
                     <p id="descricaoDoPet">Scooby é um cão leal e protetor. Ama crianças e é muito obediente. Precisa de espaço para correr e brincar. Ideal para famílias ativas.</p>
                 </div>
 
-                <img id="fotoDoPet" src="./assets/Cão Scooby.png" alt="Foto do Pat para Adoção">
+                <img id="fotoDoPet" src="./assets/Cão Scooby.png" alt="Foto do Pet para Adoção">
 
             </article>
 
+            <section class="listagem">
+                <div class="fichaDoPet">
+                    <img class="foto" src="./assets/Cão Scooby.png" alt="Pet Scooby">
+                    <h2 class="nome">Scooby</h2>
+                    <p class="descricao">Scooby é um cão leal e protetor. Ama crianças e é muito obediente. Precisa de espaço para correr e brincar. Ideal para famílias ativas.</p>
+                </div>
+
+                <div class="fichaDoPet">
+                    <img class="foto" src="./assets/Gato Pantera.png" alt="Pet Pantera">
+                    <h2 class="nome">Pantera</h2>
+                    <p class="descricao">Pantera é uma gatinha carinhosa e brincalhona. Ela adora carinho e é muito sociável com outros gatos. Procura uma família que lhe dê muito amor e atenção.</p>
+                </div>
+
+                <div class="fichaDoPet">
+                    <img class="foto" src="./assets/Cão Thor.png" alt="Pet Thor">
+                    <h2 class="nome">Thor</h2>
+                    <p class="descricao">Thor é um cão cheio de energia e lealdade. Adora brincar e estar perto da família, sempre demonstrando carinho e proteção. Procura um lar onde possa receber amor e ter bastante espaço para gastar sua energia.</p>
+                </div>
+
+                <div class="fichaDoPet">
+                    <img class="foto" src="./assets/Gato Garfield.png" alt="Pet Garfield">
+                    <h2 class="nome">Garfield</h2>
+                    <p class="descricao">Garfield é um gato independente mas carinhoso. Gosta de explorar e é muito curioso. Ideal para quem quer um companheiro aventureiro.</p>
+                </div>
+            </section>
         </section>
 
-        <ul>
+        <section class="quadroDeInscricao">
+            <h2 class="tituloQuadroDeInscricao">Pronto para transformar uma vida?</h2>
+            <p class="textoQuadroDeInscricao">Junte-se a centenas de famílias que já encontraram seus melhores amigos através do PetAdopt.</p>
 
-        </ul>
+            <form action="/caminhoParaEnviar" method="post">
+                <div class="secaoDoFormulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" required/>
+                </div>
+
+                <div class="secaoDoFormulario">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX"/>
+                </div>
+
+                <div class="secaoDoFormulario">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required/>
+                </div>
+
+                <div class="secaoDoFormulario">
+                    <label for="nome">Animal escolhido:</label>
+
+                    <div class="divCheckbox">
+                        <input class="checkbox" type="checkbox" id="checkbox" name="Cachorro"/>
+                        <p>Cachorro</p>
+                        <input class="checkbox" type="checkbox" id="checkbox" name="Gato"/>
+                        <p>Gato</p>
+                    </div>
+
+                </div>
+
+                <div class="secaoDoFormulario">
+                    <label for="nome">Nome do Animal:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Escreva o nome do animal que você quer adotar" required/>
+                </div>
+
+                <button class="buttonDoFormulario" type="submit">Comece Sua Jornada</button>
+            </form>
+        </section>
+
     </main>
 
+    <footer>
+
+        <section class="primeiraParteDoRodape">
+            <img class="logoFooter" src="./assets/Logo PetAdopt.png" alt="Logo PetAdopt">
+            <p class="textoFooter">Nossa missão é conectar pets abandonados com famílias amorosas, transformando vidas através do amor incondicional.</p>
+            
+            <article class="articleLinksFooter">
+                <a class="linksFooter" href="https://www.facebook.com/vainaweb/?locale=pt_BR" target="_blank">
+                    <img class="linkFooter" src="./assets/Logo Facebook.png" alt="Link Facebook">
+                </a>
+
+                <a class="linksFooter" href="https://www.instagram.com/vainaweb/" target="_blank">
+                    <img class="linkFooter" src="./assets/Logo Instagram.png" alt="Link Instagram">
+                </a>
+            </article>
+        </section>
+
+        <section class="segundaParteDoRodape">
+            <p>&copy; 2025 PetAdopt. Desenvolvido com ❤️ para ajudar nossos amigos peludinhos.</p>
+        </section>
+    </footer>
+
     <script src="./script.js"></script>
+
 </body>
 </html>
